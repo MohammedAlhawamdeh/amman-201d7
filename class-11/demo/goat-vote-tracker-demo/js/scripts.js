@@ -77,11 +77,11 @@ function generateRandomImage(){
 
 }
 
- function generateRandomNumber(){
-     return Math.floor(Math.random() * allGoats.length );
- }
+function generateRandomNumber(){
+    return Math.floor(Math.random() * allGoats.length );
+}
 
- function goatClickHandler(){
+function goatClickHandler(){
     if (totalClicks < 5 ){
         var clickedElement = event.target;
         var clickedElementId = clickedElement.id;
@@ -101,7 +101,20 @@ function generateRandomImage(){
             console.log(allGoats);
 
         }
-
-
+    } else {
+        generateUserMessage();
+        goatsSection.removeEventListener('click', goatClickHandler);
     }
- }
+}
+
+function generateUserMessage(){
+    var ulElement = document.getElementById('finalResult');    
+    
+    for (let index = 0; index < allGoats.length; index++) {
+        var listItem = document.createElement('li');
+        // `name of the image` has been shown `number of times it was displayed` and clicked `number of times it has been clicked`
+        listItem.textContent = allGoats[index].name + ' has been shown ' + allGoats[index].numberOfTimesShown + ' and has been clicked '+allGoats[index].numberOfClicks;
+        ulElement.appendChild(listItem);
+    }
+
+}
