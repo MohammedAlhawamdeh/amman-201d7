@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1" id='cookie-sales-table'></table>
+    <form action="submit" id="cookiesForm">
+        <fieldset>
+          <legend>Add New Stand</legend>
+          
+          <label for="standLocation">Stand Location</label>
+          <input type="text" id="standLocation">
+    
+          <label for="minCust">Minimum Customers</label>
+          <input type="number" id="minCust">
+    
+          <label for="maxCust"> Maximum Customers</label>
+          <input type="number" id="maxCust">
+    
+          <label for="avgCookies">Average Cookies Sold Per Customer</label>
+          <input type="number" step="any" id="avgCookies">
+    
+          <input type="submit" id="submitForm">
+        </fieldset>
+      </form>
+    <script src="script.js"></script>
+</body>
+</html>
