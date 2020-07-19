@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>A/V Demo</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <style>
+    video{
+      width: 400px;
+      height: 400px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Let's look at how we embed audio and video resources using HTML5!</h1>
+  <h2>Audio</h2>
+
+  <!-- add audio -->
+  <audio id="levees" src="levees.m4a" controls muted loop></audio>
+
+  <ul>Common attributes to control playback of audio
+    <li>autoplay: Boolean; use sparingly</li>
+    <li>controls: provides playback controls to user</li>
+    <li>loop: Boolean; will play audio over and over</li>
+    <li>muted: Boolean; can use this to mute audio on page load</li>
+    <li>src: link to the audio source file</li>
+    <li>volume: Range of 0.0 (silent) to 1.0 (loudest)</li>
+    <button id="randomizer">Click this button to randomly adjust the volume</button>
+
+    <h2>Video</h2>
+    
+    <!-- add video -->
+    <video id='doggoVideo' src="demi.mov" poster="frankie.jpeg"  height="200" width="200" controls></video>
+
+    <ul>Common attributes to control playback of video
+      <li>autoplay: Boolean; use sparingly</li>
+      <li>controls: provides playback controls to user</li>
+      <li>height: MUST be an absolute value; no percentages!</li>
+      <li>muted: Boolean; can use this to mute audio on page load</li>
+      <li>poster: use an alternate image in place of the first frame before playback has been initialized</li>
+      <li>src: link to the video source file</li>
+      <li>volume: Range of 0.0 (silent) to 1.0 (loudest)</li>
+      <li>width: May be an absolute value or percentages</li>
+    </ul>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
